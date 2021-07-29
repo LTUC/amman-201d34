@@ -10,7 +10,7 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sum(a, b) { //eslint-disable-line
   let total = a + b;
-  return [total,  `The sum of ${a} and ${b} is ${total}.`];
+  return [total, `The sum of ${a} and ${b} is ${total}.`];
 }
 
 // Here is the test for sum(); uncomment it to run it
@@ -27,12 +27,13 @@ Write a function called multiply() that takes in two numbers as arguments and re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiply() function and see if the test passes.*/
 
 // Write your code here
-function multiply(a, b) { //eslint-disable-line
-
+function multiply(x, y) { //eslint-disable-line
+  let product = x * y;
+  return [product, `The product of ${x} and ${y} is ${product}.`];
 }
 
 // Here is the test for multiply(); uncomment it to run it
-// testMultiply(5,9);
+testMultiply(5, 9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -49,11 +50,16 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
+let sumOf2=sum(a,b);
+let sumOf3=sum(sumOf2[0],c);
+let mulOf2=multiply(a,b);
+let mulOf3=multiply(mulOf2[0],c);
+return [sumOf3[0], mulOf3[0], `${a} and ${b} and ${c} sum to ${sumOf3[0]}.`, `The product of ${a} and ${b} and ${c} is ${mulOf3[0]}.`];
 
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -117,7 +123,7 @@ This function should be dynamic, accepting an array of any length.
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyAnyArray() function and see if the test passes.*/
 
 // Write your code here
-let testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
+let testDynamicArray = [1, 2, 3, 4, 5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
 
