@@ -66,7 +66,7 @@ function sumAndMultiply(a, b, c) { //eslint-disable-line
   // console.log(sumFunction);
   // console.log(multiplyFunction);
 
-  return[sumFunction, multiplyFunction, '4 and 7 and 5 sum to 16.', 'The product of 4 and 7 and 5 is 140.']
+  return[sumFunction, multiplyFunction, `${a} and ${b} and ${c} sum to ${sumFunction}.`, `The product of ${a} and ${b} and ${c} is ${multiplyFunction}.`]
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
