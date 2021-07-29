@@ -58,15 +58,23 @@ function sumAndMultiply(a, b, c) { //eslint-disable-line
   //  let sumFunction = 4 + 7 + 5;
   // let multiplyFunction = 4 * 7 * 5;
 
-  let sumFunction = sum(a, b + c)[0]
-  let multiplyFunction = multiply(a, b * c)[0]
+  // let sumFunction = sum(a, b + c)[0]
+
+  let sumFunction = sum(a, b)[0]
+  let sumTotal = sum(sumFunction, c)[0]
+  
+  // let multiplyFunction = multiply(a, b * c)[0]
+
+  let multiplyFunction = multiply(a, b)[0]
+  let multiplyTotal = multiply(multiplyFunction, c)[0]
+
 
   // let x = sum(a,b + c)[0]
   // console.log(x);
   // console.log(sumFunction);
   // console.log(multiplyFunction);
 
-  return [sumFunction, multiplyFunction, `${a} and ${b} and ${c} sum to ${sumFunction}.`, `The product of ${a} and ${b} and ${c} is ${multiplyFunction}.`]
+  return [sumTotal, multiplyTotal, `${a} and ${b} and ${c} sum to ${sumTotal}.`, `The product of ${a} and ${b} and ${c} is ${multiplyTotal}.`]
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
@@ -91,7 +99,12 @@ function sumArray(sumArr) { //eslint-disable-line
 
   // console.log(sum(sumArr[0],sumArr[1] + sumArr[2])[0]);
 
-  return [sum(sumArr[0], sumArr[1] + sumArr[2])[0], `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${sum(sumArr[0], sumArr[1] + sumArr[2])[0]} is their sum.`]
+  let sumFunction = sum(sumArr[0],sumArr[1])[0]
+  let totalSum = sum(sumFunction, sumArr[2])[0]
+  // console.log(sumFunction);
+  // console.log(totalsum);
+
+  return [totalSum, `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${totalSum} is their sum.`]
 
   // console.log(sumArr[0]);
 
@@ -120,10 +133,18 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
 
+  let multiplyFunction = multiply(multArr[0], multArr[1])[0]
+  let totalMultiply = multiply(multiplyFunction, multArr[2])[0]
+
+  // console.log(multiplyFunction);
+  // console.log(totalMultiply);
+
+  return[totalMultiply, `The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${totalMultiply}.`]
+
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
