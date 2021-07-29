@@ -13,8 +13,9 @@ function sum(a, b) { //eslint-disable-line
   return [total,  `The sum of ${a} and ${b} is ${total}.`];
 }
 
-// Here is the test for sum(); uncomment it to run it
 testSum(4, 7);
+
+// Here is the test for sum(); uncomment it to run it
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
