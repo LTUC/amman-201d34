@@ -62,7 +62,7 @@ function sumAndMultiply(a, b, c) { //eslint-disable-line
 
   let sumFunction = sum(a, b)[0]
   let sumTotal = sum(sumFunction, c)[0]
-  
+
   // let multiplyFunction = multiply(a, b * c)[0]
 
   let multiplyFunction = multiply(a, b)[0]
@@ -99,7 +99,7 @@ function sumArray(sumArr) { //eslint-disable-line
 
   // console.log(sum(sumArr[0],sumArr[1] + sumArr[2])[0]);
 
-  let sumFunction = sum(sumArr[0],sumArr[1])[0]
+  let sumFunction = sum(sumArr[0], sumArr[1])[0]
   let totalSum = sum(sumFunction, sumArr[2])[0]
   // console.log(sumFunction);
   // console.log(totalsum);
@@ -139,7 +139,7 @@ function multiplyArray(multArr) { //eslint-disable-line
   // console.log(multiplyFunction);
   // console.log(totalMultiply);
 
-  return[totalMultiply, `The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${totalMultiply}.`]
+  return [totalMultiply, `The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${totalMultiply}.`]
 
 }
 
@@ -169,9 +169,20 @@ let testDynamicArray = [1, 2, 3, 4, 5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
 
+  let multiplyFunction = multiply(dynamicArray[1], dynamicArray[2])[0]
+
+  let result = multiply(multiplyFunction, dynamicArray[3])[0]
+
+  let total = multiply(result, dynamicArray.length)[0]
+
+  // console.log(total, `The numbers ${dynamicArray} have a product of ${total}.`);
+
+
+  return [total, `The numbers ${dynamicArray} have a product of ${total}.`]
+
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyAnyArray(testDynamicArray);
+testMultiplyAnyArray(testDynamicArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
