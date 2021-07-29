@@ -75,16 +75,16 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 let testArray = [2, 3, 4]; //eslint-disable-line
-//console.log('the some of array total function    '+sumArray(testArray))
-function sumArray(sumArr) { //eslint-disable-line
+//console.log('the some of array total function    '+sumArray(testArray));
 
-  let sum= 0;
+function sumArray(sumArr) { //eslint-disable-line
+  let sumOfElements= [0,0];
   for(let i=0;i<3;i++){
-  sum=sum+ sumArr[i];
-  //console.log('sum in for loop   '+sum);
+    sumOfElements=sum(sumOfElements[0], sumArr[i]);
+  //console.log('sum in for loop   '+sumOfElements[0]);
 }
 
-return[sum,`${testArray[0]},${testArray[1]},${testArray[2]} was passed in as an array of numbers, and ${sum} is their sum.`]
+return[sumOfElements[0],`${testArray[0]},${testArray[1]},${testArray[2]} was passed in as an array of numbers, and ${sumOfElements[0]} is their sum.`]
 
 }
 
@@ -106,7 +106,12 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
+  let product= 1;
+  for(let i=0;i<3;i++){
+    product=product+ sumArr[i];
+}
 
+return[product,`${testArray[0]},${testArray[1]},${testArray[2]} was passed in as an array of numbers, and ${sum} is their sum.`]
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
