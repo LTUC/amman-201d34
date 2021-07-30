@@ -10,7 +10,8 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sum(a, b) { //eslint-disable-line
   let total = a + b;
-  return [total,  `The sum of ${a} and ${b} is ${total}.`];
+  let result =`The sum of ${a} and ${b} is ${total}.`;
+  return [total,  result];
 }
 
 // Here is the test for sum(); uncomment it to run it
