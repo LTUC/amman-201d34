@@ -63,12 +63,34 @@ IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this funct
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumAndMultiply() function and see if the test passes.*/
 
 // Write your code here
-function sumAndMultiply(a, b, c) { //eslint-disable-line
+//function of summing two values x and y and return result
+// function sum(x, y)
+// {
+// return (x+y);
+// }
+// //function of multiplying 2 values x and y and returb result
+// function multiply(x, y)
+// {
+// return (x*y);
+// }
+//function: sumAndMultiply for 3 variables x y and z
+function sumAndMultiply(x,y,z)
+{
+var arr = [];//create an empty array
+arr[0] = sum(x,sum(y,z)[0])[0];//at 0 th argument sum x,y and z
+arr[1] = multiply(x, multiply(y,z)[0])[0];//at 1st arg: multiply x y and z
+arr[2] = x+" and "+y+" and "+z+" sum to "+arr[0]+"."; //set 2nd arg
+//set 3rd arg
+arr[3] = "The product of "+x+" and "+y+" and "+z+" is "+arr[1]+".";
 
+return arr;//return array
 }
 
+//print result in console
+console.log(sumAndMultiply(4,7,5));
+
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
