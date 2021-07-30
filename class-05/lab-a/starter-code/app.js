@@ -12,6 +12,7 @@ function sum(a, b) { //eslint-disable-line
   let total = a + b;
   return [total,  `The sum of ${a} and ${b} is ${total}.`];
 }
+console.log(sum(4,7));
 
 // Here is the test for sum(); uncomment it to run it
 testSum(4, 7);
@@ -27,12 +28,26 @@ Write a function called multiply() that takes in two numbers as arguments and re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiply() function and see if the test passes.*/
 
 // Write your code here
-function multiply(a, b) { //eslint-disable-line
-
-}
+// Function named multiply that takes two numbers as arguments
+// returns an array
+function multiply(a,b){
+  // Declaring an array
+  var multArr = [];
+  // Finding product of two numbers
+  var product = a * b;
+  // return array
+  // Storing product in first element
+  multArr[0] = product;
+  var result = `The product of ${a} and ${b} is ${product}.`;
+  // Storing string in second element
+  multArr[1] = result;
+  return multArr;
+  }
+  // Calling above function with two values
+  console.log(multiply(5,9));
 
 // Here is the test for multiply(); uncomment it to run it
-// testMultiply(5,9);
+testMultiply(5,9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
