@@ -160,8 +160,8 @@ function multiplyAnyArray(dynamicArray) { //eslint-disable-line
     }
   }
   let result = `The numbers ${arrStr} have a product of ${mult}.`;
-  let answer = [mult, result];
-  return answer;
+  let answer6 = [mult, result];
+  return answer6;
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
