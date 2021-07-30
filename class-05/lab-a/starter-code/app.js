@@ -104,13 +104,13 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
-console.log('the mul of array total function    '+multiplyArray(testArray))
+//console.log('the mul of array total function    '+multiplyArray(testArray))
 
 function multiplyArray(multArr) { //eslint-disable-line
   let mulOfElements= [1,1];
   for(let i=0;i<3;i++){
     mulOfElements=multiply(mulOfElements[0], multArr[i]);
-  console.log('sum in for loop   '+mulOfElements[0]);
+  //console.log('sum in for loop   '+mulOfElements[0]);
 }
 return [mulOfElements[0],`The numbers ${testArray[0]},${testArray[1]},${testArray[2]} have a product of ${mulOfElements[0]}.`];
 }
@@ -138,12 +138,26 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 let testDynamicArray = [1, 2, 3, 4, 5]; //eslint-disable-line
+//console.log('the mul of array total function    '+multiplyAnyArray(testDynamicArray))
 
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+let mulOfElements=[dynamicArray[0],1];
+let stringNumbers=dynamicArray[0];
 
+  for(let i=1; i<dynamicArray.length;i++)
+  {  //console.log('length of array    '+dynamicArray.length);
+
+    mulOfElements=multiply(mulOfElements[0], dynamicArray[i]);
+  //console.log('sum in for loop   '+mulOfElements[0]);
+  stringNumbers=  stringNumbers + ',' + dynamicArray[i]; 
+  //console.log('string numbers is:   '+stringNumbers);
+
+  }
+  return [mulOfElements[0], `The numbers ${stringNumbers} have a product of ${mulOfElements[0]}.`]
+//-------------------------------  
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyAnyArray(testDynamicArray);
+ testMultiplyAnyArray(testDynamicArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
