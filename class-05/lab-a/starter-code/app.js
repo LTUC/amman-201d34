@@ -5,7 +5,7 @@ function sum(a, b) {
   console.log(result);
   return result;
 }
-sum(4, 7);
+testSum(4, 7);
 //##################### SOLVED 2 #########################
 
 function multiply(a, b) { //eslint-disable-line
@@ -14,7 +14,7 @@ function multiply(a, b) { //eslint-disable-line
   console.log(result);
   return result;
   }
-  multiply(5,9)
+  testMultiply(5,9)
 
 //##################### SOLVED 3 #########################
 
@@ -28,35 +28,43 @@ function sumAndMultiply(a, b, c) {
   console.log(result);
   return result;
 }
-sumAndMultiply(4,7,5)
+testSumAndMultiply(4,7,5)
 //##################### SOLVED 4 #########################
-let testArray = [2, 3, 4]; 
-
-function sumArray(a, b, c) { 
-let totalSum = (a + b + c);
-let result = [totalSum, `${a},${b},${c} was passed in as an array of numbers, and ${totalSum} is their sum.`];
-console.log(result);
-return result;
-
+let testArray = [2, 3, 4];
+function sumArray(sumArr) {
+let sum = 0;
+let arrStr = "";
+for (let i = 0; i < sumArr.length; i++) {
+  sum += sumArr[i];
+  arrStr += sumArr[i];
+  if (i != sumArr.length - 1) {
+    arrStr += ","
+  }
 }
-sumArray(testArray[0], testArray[1], testArray[2])
+let result = `${arrStr} was passed in as an array of numbers, and ${sum} is their sum.`;
+let answer = [sum, result];
+return answer;
+}
+testSumArray(testArray);
 
 //##################### SOLVED 5 #########################
 
-function multiply(a, b, c) { 
-  let total = a * b * c;
-  let result = total
-  return result;
-}
-let numbersArray = [2, 3, 4];
+function multiplyArray(multArr) { //eslint-disable-line
 
-function multiplyArray(a, b, c) { 
-  let total = multiply(a, b, c);
-  let ArrayOut = [total, `The numbers ${a},${b},${c} have a product of ${total}.`];
-  console.log(ArrayOut);
-  return ArrayOut;
+  let mult = 1;
+  let arrStr = "";
+  for (let i = 0; i < multArr.length; i++) {
+    mult *= multArr[i];
+    arrStr += multArr[i];
+    if (i != multArr.length - 1) {
+      arrStr += ","
+    }
+  }
+  let result = `The numbers ${arrStr} have a product of ${mult}.`;
+  let answer = [mult, result];
+  return answer;
 }
-multiplyArray(numbersArray[0], numbersArray[1], numbersArray[2])
+testMultiplyArray(testArray);
 
 // //##################### SOLVED 6 #########################
 
